@@ -44,7 +44,7 @@ export default function ChatPage() {
                   : "justify-start ms-2"
               } mb-4`}
             >
-              <div
+              <pre
                 className={`rounded-lg p-2  ${
                   message.sender === "user"
                     ? "bg-blue-500 text-white"
@@ -52,12 +52,12 @@ export default function ChatPage() {
                 }`}
               >
                 {message.text}
-              </div>
+              </pre>
             </div>
           ))}
         </div>
         <div className="absolute mx-[5%] w-[90%] bottom-5 flex mt-4">
-          <input
+          <textarea
             onKeyDown={handleKeyDown}
             type="text"
             value={inputValue}
